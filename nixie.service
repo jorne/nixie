@@ -1,0 +1,14 @@
+# Nixie Clock
+
+[Unit]
+Description=Nixie Clock
+After=multi-user.target
+
+[Service]
+Type=simple
+Restart=always
+WorkingDirectory=/home/nixie/nixie
+ExecStart=/usr/bin/python3 /home/nixie/nixie/main.py
+
+[Install]
+WantedBy=multi-user.target
